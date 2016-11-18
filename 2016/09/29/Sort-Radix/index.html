@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Common Sort Algorithm Practice II -- Radix Sort | VINCEC的卖命地</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="The Radix algorithm including three class, method RadixSort class, randomGenerater class and unit test.
+
+radixSort.java123456789101112131415161718192021222324252627282930313233343536373839404142434445">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Common Sort Algorithm Practice II -- Radix Sort">
+<meta property="og:url" content="http://vincecao.github.io/2016/09/29/Sort-Radix/index.html">
+<meta property="og:site_name" content="VINCEC的卖命地">
+<meta property="og:description" content="The Radix algorithm including three class, method RadixSort class, randomGenerater class and unit test.
+
+radixSort.java123456789101112131415161718192021222324252627282930313233343536373839404142434445">
+<meta property="og:image" content="http://i.imgur.com/b8dQ8Hc.png counting_sort">
+<meta property="og:image" content="http://i.imgur.com/8zmwcqz.png radix">
+<meta property="og:image" content="http://i.imgur.com/UNwCGc9.gif">
+<meta property="og:updated_time" content="2016-10-25T12:46:59.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Common Sort Algorithm Practice II -- Radix Sort">
+<meta name="twitter:description" content="The Radix algorithm including three class, method RadixSort class, randomGenerater class and unit test.
+
+radixSort.java123456789101112131415161718192021222324252627282930313233343536373839404142434445">
+<meta name="twitter:image" content="http://i.imgur.com/b8dQ8Hc.png counting_sort">
+  
+    <link rel="alternative" href="/atom.xml" title="VINCEC的卖命地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  <style type="text/css">
+    .cuslogo{
+      transition: all .5s ease-out;
+      width: 25px;
+      height: auto;
+    }
+
+    .cuslogo:hover{
+      transform: scale(1.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">VINCEC的卖命地</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/kulucolo"><img class="cuslogo" src="http://i.imgur.com/wtppawI.png" alt= "kulucolo"></a></li>
+			<li><a href="https://github.com/vincecao/"><img class="cuslogo" src="http://i.imgur.com/5OEBGZB.png" alt= "github/vincecao"></a></li>
+			<li><a href="http://weibo.com/2267346425/"><img class="cuslogo" src="http://i.imgur.com/bm78nsD.png" alt= "weibo/SaaB26"></a></li>
+			<li><a href="https://www.linkedin.com/in/lineng-cao-36b693121"><img class="cuslogo" src="http://i.imgur.com/hmPUhBs.png" alt= "linkedin/lineng-cao"></a></li>
+			<li><a href="https://www.douban.com/people/saablancias/"><img class="cuslogo" src="http://i.imgur.com/1E4CIwC.png" alt= "douban/saablancias"></a></li>
+			<li><a href="https://www.flickr.com/photos/saablancias/"><img class="cuslogo" src="http://i.imgur.com/QtAzFxD.png" alt= "flickr/saablancias"></a></li>
+			<li><a href="https://www.instagram.com/vince_tso/"><img class="cuslogo" src="http://i.imgur.com/iFDXGJQ.png" alt= "instagram/vince_tso"></a></li>
+		</ul>
+		<ul>
+			<li><a href="/" rel="section">HOME</a></li>
+			<li><a href="/archives" rel="section">ARCHIVES</a></li>
+			<li><a href="/about" rel="section">ABOUT</a></li>
+			<li><a href="/video" rel="section">VIDEO</a></li>
+			<li><a href="/design" rel="section">DESIGN</a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://vincecao.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-Sort-Radix" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/09/29/Sort-Radix/" class="article-date">
+  <time datetime="2016-09-29T01:56:29.000Z" itemprop="datePublished">2016-09-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">VINCEC</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Common Sort Algorithm Practice II -- Radix Sort
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>The Radix algorithm including three class, method RadixSort class, randomGenerater class and unit test.</p>
+<p><img src="http://i.imgur.com/b8dQ8Hc.png counting_sort" alt=""><br><img src="http://i.imgur.com/8zmwcqz.png radix" alt=""><br><img src="http://i.imgur.com/UNwCGc9.gif" alt=""></p>
+<h2 id="radixSort-java"><a href="#radixSort-java" class="headerlink" title="radixSort.java"></a>radixSort.java</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*****************************************************************************</span></div><div class="line"> * Author: Lineng Cao</div><div class="line"> * Title: radixSort in Java</div><div class="line"> * Statement:</div><div class="line"> *   This is a Bucket Sort algorithm demo for 0~999 in Java, integer r can be 10,</div><div class="line"> *   2^3(8) or other number for faster sorting.</div><div class="line"> *</div><div class="line"> * Sample Output:</div><div class="line"> * 		The unsorted array is: ------------------------------</div><div class="line"> *		900	181	410	212	246	281	912	701	647	890	</div><div class="line"> *		</div><div class="line"> *		The RadixSort answer is: ------------------------------</div><div class="line"> *		181	212	246	281	410	647	701	890	900	912	</div><div class="line"> *		The RadixSort time is: 0</div><div class="line"> *</div><div class="line"> ****************************************************************************/</div><div class="line"></div><div class="line"><span class="keyword">int</span> flag = <span class="number">0</span>; <span class="comment">//flag for mark loop</span></div><div class="line"><span class="comment">//get the count array</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] getCounts(<span class="keyword">int</span>[] array, <span class="keyword">int</span> r)&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span>[] countsArray = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;array.length; i++)&#123;</div><div class="line">		countsArray[getNumber(array[i], flag, r)]+=<span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> countsArray;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//get the offset array</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] getOffsets(<span class="keyword">int</span>[] array, <span class="keyword">int</span> r)&#123;</div><div class="line">	<span class="keyword">int</span>[] offsetArray = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</div><div class="line">	offsetArray[<span class="number">0</span>]=getCounts(array, r)[<span class="number">0</span>];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i &lt; getCounts(array, r).length; i++)&#123;</div><div class="line">		offsetArray[i] = getCounts(array, r)[i] + offsetArray[i-<span class="number">1</span>];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> offsetArray;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//counting sort and loopinto radixsort</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] sort(<span class="keyword">int</span>[] array, <span class="keyword">int</span> r)&#123;</div><div class="line">	<span class="keyword">int</span>[] newArray = <span class="keyword">new</span> <span class="keyword">int</span>[array.length];</div><div class="line">	<span class="keyword">int</span>[] offsetArray = getOffsets(array, r);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=array.length-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</div><div class="line">		newArray[offsetArray[getNumber(array[i],flag, r)]-<span class="number">1</span>] = array[i];</div><div class="line">		offsetArray[getNumber(array[i],flag, r)]-=<span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	flag++;</div><div class="line">	<span class="keyword">if</span>(flag&lt;<span class="number">3</span>)&#123; <span class="comment">//loop 3 times for 3 units digit</span></div><div class="line">		</div><div class="line">		newArray = sort(newArray, r);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">return</span> newArray;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//to decide on digit or others(2 and so on)</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNumber</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> flag, <span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span> (flag==<span class="number">0</span>)&#123;</div><div class="line">		<span class="keyword">return</span> (n % r);</div><div class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(flag==<span class="number">1</span>)&#123;</div><div class="line">		<span class="keyword">return</span> ((n/r)%r);</div><div class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(flag==<span class="number">2</span>)&#123;</div><div class="line">		<span class="keyword">return</span> ((n/r/r)%r);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">return</span> (Integer) <span class="keyword">null</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Test-java"><a href="#Test-java" class="headerlink" title="Test.java"></a>Test.java</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">	randomGenerater ran = <span class="keyword">new</span> randomGenerater();</div><div class="line">	<span class="keyword">int</span>[] newArray;</div><div class="line">	<span class="keyword">int</span>[] wholeArray = ran.generate(<span class="number">1000</span>);</div><div class="line">	<span class="keyword">long</span> end,start;</div><div class="line">	<span class="comment">//int[] wholeArray = &#123;5,4,3,2,1,6,5,4,3,1,56,76,565,68,78,7,9,79,8,9,80,4,5,6,7&#125;;</span></div><div class="line">	System.out.print(<span class="string">"\nThe unsorted array is: ------------------------------"</span>);</div><div class="line">	ran.outPutArray(wholeArray);</div><div class="line"></div><div class="line">	</div><div class="line">	<span class="comment">//Radix Sort</span></div><div class="line">	radixSort con = <span class="keyword">new</span> radixSort();</div><div class="line">		</div><div class="line">	start = System.currentTimeMillis();</div><div class="line">	newArray = con.sort(wholeArray, <span class="number">10</span>);</div><div class="line">	end = System.currentTimeMillis();</div><div class="line">	</div><div class="line">	System.out.print(<span class="string">"\nThe RadixSort answer is: ------------------------------"</span>);</div><div class="line">	ran.outPutArray(newArray);</div><div class="line">	System.out.print(<span class="string">"\nThe RadixSort time is: "</span>);</div><div class="line">	System.out.println(end-start);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="randomGenerater-java"><a href="#randomGenerater-java" class="headerlink" title="randomGenerater.java"></a>randomGenerater.java</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] generate(<span class="keyword">int</span> n)&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">int</span>[] numberArray = <span class="keyword">new</span> <span class="keyword">int</span>[n]; </div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</div><div class="line">		<span class="keyword">int</span> ran = (<span class="keyword">int</span>) (Math.random()*<span class="number">1000</span>);</div><div class="line">		numberArray[i] = ran;</div><div class="line">		<span class="comment">//System.out.print(numberArray[i]);</span></div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> numberArray;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">outPutArray</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</div><div class="line">	System.out.println();</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++)&#123;</div><div class="line">		System.out.print(array[i] + <span class="string">"\t"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">double</span>[] generateDouble (<span class="keyword">int</span> n)&#123;</div><div class="line">	<span class="keyword">double</span>[] numberArray = <span class="keyword">new</span> <span class="keyword">double</span>[n];</div><div class="line">	</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</div><div class="line"></div><div class="line">		<span class="comment">//BigDecimal b = new BigDecimal(Math.random());  </span></div><div class="line">		<span class="comment">//double ran = b.setScale(1,BigDecimal.ROUND_HALF_UP).doubleValue();</span></div><div class="line">		<span class="keyword">double</span> ran = Math.random();</div><div class="line">		numberArray[i] = ran;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> numberArray;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">outPutArray</span><span class="params">(<span class="keyword">double</span>[] array)</span></span>&#123;</div><div class="line">	System.out.println();</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++)&#123;</div><div class="line">		System.out.print(array[i] + <span class="string">"\t"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/">code</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/29/Sort-Bucket/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Common Sort Algorithm Practice III -- Bucket Sort
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/29/Sort-Heap/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Common Sort Algorithm Practice I -- Heap Sort
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:vincecao.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">VINCEC的卖命地</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2016 VINCEC<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+	<center><h1><a href="http://saab26.lofter.com/"><font color="white"> - MY DARKSIDE - </font></a></h1></center>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

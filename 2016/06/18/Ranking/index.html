@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>College Select | VINCEC的卖命地</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Due to these days I was searching about my future college of graduate program. And all kinds ranking information almost make me crazy! So for diminishing my pressure of evoluating, I write a small seg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="College Select">
+<meta property="og:url" content="http://vincecao.github.io/2016/06/18/Ranking/index.html">
+<meta property="og:site_name" content="VINCEC的卖命地">
+<meta property="og:description" content="Due to these days I was searching about my future college of graduate program. And all kinds ranking information almost make me crazy! So for diminishing my pressure of evoluating, I write a small seg">
+<meta property="og:image" content="http://i.imgur.com/79Lw0XW.png">
+<meta property="og:updated_time" content="2016-06-21T03:48:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="College Select">
+<meta name="twitter:description" content="Due to these days I was searching about my future college of graduate program. And all kinds ranking information almost make me crazy! So for diminishing my pressure of evoluating, I write a small seg">
+<meta name="twitter:image" content="http://i.imgur.com/79Lw0XW.png">
+  
+    <link rel="alternative" href="/atom.xml" title="VINCEC的卖命地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  <style type="text/css">
+    .cuslogo{
+      transition: all .5s ease-out;
+      width: 25px;
+      height: auto;
+    }
+
+    .cuslogo:hover{
+      transform: scale(1.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">VINCEC的卖命地</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/kulucolo"><img class="cuslogo" src="http://i.imgur.com/wtppawI.png" alt= "kulucolo"></a></li>
+			<li><a href="https://github.com/vincecao/"><img class="cuslogo" src="http://i.imgur.com/5OEBGZB.png" alt= "github/vincecao"></a></li>
+			<li><a href="http://weibo.com/2267346425/"><img class="cuslogo" src="http://i.imgur.com/bm78nsD.png" alt= "weibo/SaaB26"></a></li>
+			<li><a href="https://www.linkedin.com/in/lineng-cao-36b693121"><img class="cuslogo" src="http://i.imgur.com/hmPUhBs.png" alt= "linkedin/lineng-cao"></a></li>
+			<li><a href="https://www.douban.com/people/saablancias/"><img class="cuslogo" src="http://i.imgur.com/1E4CIwC.png" alt= "douban/saablancias"></a></li>
+			<li><a href="https://www.flickr.com/photos/saablancias/"><img class="cuslogo" src="http://i.imgur.com/QtAzFxD.png" alt= "flickr/saablancias"></a></li>
+			<li><a href="https://www.instagram.com/vince_tso/"><img class="cuslogo" src="http://i.imgur.com/iFDXGJQ.png" alt= "instagram/vince_tso"></a></li>
+		</ul>
+		<ul>
+			<li><a href="/" rel="section">HOME</a></li>
+			<li><a href="/archives" rel="section">ARCHIVES</a></li>
+			<li><a href="/about" rel="section">ABOUT</a></li>
+			<li><a href="/video" rel="section">VIDEO</a></li>
+			<li><a href="/design" rel="section">DESIGN</a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://vincecao.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-Ranking" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/06/18/Ranking/" class="article-date">
+  <time datetime="2016-06-18T14:51:41.000Z" itemprop="datePublished">2016-06-18</time>
+</a>
+		</span>
+		<span class="meta-elements author">VINCEC</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      College Select
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Due to these days I was searching about my future college of graduate program. And all kinds ranking information almost make me crazy! So for diminishing my pressure of evoluating, I write a small segement of codes and help me!</p>
+<p>I pulled data from two 2016 ranking website(technically it is not raw data file because I can not find them on the usnews website) and simplely made them into Excel file. Then the code can read and make some simple judgement here, LOL. </p>
+<p>IMPORTANT, you need to download the <a href="https://drive.google.com/file/d/0Bx1Bvt5syJbqblh4dUJpWEdlRUE/view?usp=sharing" title="Excel file" target="_blank" rel="external">Excel</a> file and get <a href="http://www.apache.org/dyn/closer.lua/poi/release/bin/poi-bin-3.14.zip" title="apache.POI" target="_blank" rel="external">apache.POI</a> jar files first</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">package</span> test;</div><div class="line"><span class="keyword">import</span> java.io.FileInputStream;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.apache.poi.hssf.usermodel.HSSFCell;</div><div class="line"><span class="keyword">import</span> org.apache.poi.hssf.usermodel.HSSFSheet;</div><div class="line"><span class="keyword">import</span> org.apache.poi.hssf.usermodel.HSSFWorkbook;</div><div class="line"><span class="keyword">import</span> org.apache.poi.poifs.filesystem.POIFSFileSystem;</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"> * @Author: Vince Cao</div><div class="line"> 	You can down load apache.POI in http://www.apache.org/dyn/closer.lua/poi/release/bin/poi-bin-3.14.zip</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ranking_system</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		doRanking(<span class="number">0</span>,<span class="number">1</span>,<span class="number">9</span>,<span class="number">10</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doRanking</span><span class="params">(<span class="keyword">int</span> us_rankingCol, <span class="keyword">int</span> us_nameCol, <span class="keyword">int</span> cs_rankingCol, <span class="keyword">int</span> cs_nameCol)</span></span>&#123;</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line"></div><div class="line">			String school_names, state_name;</div><div class="line">			HSSFCell usRank;</div><div class="line">			HSSFCell csRank = <span class="keyword">null</span>;</div><div class="line">			<span class="keyword">double</span> num_us,num_cs;</div><div class="line">			<span class="keyword">double</span> sum = <span class="number">0</span>;</div><div class="line">		    </div><div class="line">			POIFSFileSystem fs = <span class="keyword">new</span> POIFSFileSystem(<span class="keyword">new</span> FileInputStream(<span class="string">"C:/Users/qq234/Desktop/US_ranking.xls"</span>));</div><div class="line">		    <span class="meta">@SuppressWarnings</span>(<span class="string">"resource"</span>)</div><div class="line">			HSSFWorkbook wb = <span class="keyword">new</span> HSSFWorkbook(fs);</div><div class="line">		    HSSFSheet sheet = wb.getSheetAt(<span class="number">0</span>);</div><div class="line"></div><div class="line">		    <span class="keyword">int</span> counter = <span class="number">0</span>;</div><div class="line"></div><div class="line">		    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; <span class="number">403</span>;i += <span class="number">3</span>)&#123;		    	</div><div class="line">			    </div><div class="line">		    	usRank = sheet.getRow(i).getCell(us_rankingCol); </div><div class="line">		    	num_us = Double.valueOf(usRank.toString());</div><div class="line">		    	</div><div class="line">		    	school_names = sheet.getRow(i).getCell(us_nameCol).toString();</div><div class="line">		    	<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j&lt;<span class="number">361</span>;j += <span class="number">3</span>)&#123;</div><div class="line">		    		csRank = sheet.getRow(j).getCell(cs_rankingCol);		    		</div><div class="line">		    		num_cs = Double.valueOf(csRank.toString());</div><div class="line">		    		</div><div class="line">		    		<span class="keyword">if</span> (school_names.equals(sheet.getRow(j).getCell(cs_nameCol).toString()))&#123;    			</div><div class="line">		    			</div><div class="line">		    			sum = num_us + num_cs;</div><div class="line">		    			state_name = sheet.getRow(j+<span class="number">2</span>).getCell(cs_nameCol).toString();</div><div class="line">		    			</div><div class="line">		    			<span class="comment">//if (sum&gt;80 &amp;&amp; sum &lt;110)&#123; // rule 1</span></div><div class="line">		    			<span class="keyword">if</span> (num_cs&gt; <span class="number">60</span> &amp;&amp; num_cs&lt; <span class="number">100</span> &amp;&amp; num_us&gt; <span class="number">90</span> &amp;&amp; num_us&lt; <span class="number">110</span>)&#123; <span class="comment">// rule 2 </span></div><div class="line">		    			<span class="comment">//if (num_cs&gt; 75 &amp;&amp; num_cs&lt; 85)&#123; // rule 3 </span></div><div class="line">		    				counter++;</div><div class="line">		    				System.out.println(<span class="string">"No."</span>+counter);</div><div class="line">		    				System.out.println(state_name);</div><div class="line">		    				System.out.println(sheet.getRow(j).getCell(cs_nameCol));</div><div class="line">		    				System.out.println(<span class="string">"US ranking is: "</span> + usRank);</div><div class="line">		    				System.out.println(<span class="string">"CS ranking is: "</span> + csRank);</div><div class="line">		    				System.out.println();</div><div class="line">		    			&#125;</div><div class="line">		    		&#125;</div><div class="line">		    	&#125;</div><div class="line"></div><div class="line">		    &#125;</div><div class="line">		    </div><div class="line">		&#125; <span class="keyword">catch</span>(Exception ioe) &#123;</div><div class="line">		    ioe.printStackTrace();</div><div class="line">		&#125;</div><div class="line"> </div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Output-is-like-this"><a href="#Output-is-like-this" class="headerlink" title="Output is like this"></a>Output is like this</h2><p><img src="http://i.imgur.com/79Lw0XW.png" alt="" title="output_screenshot"></p>
+<h3 id="Now-I-can-simple-make-my-own-filter-rules-to-find-the-college-may-be-will-accept-me"><a href="#Now-I-can-simple-make-my-own-filter-rules-to-find-the-college-may-be-will-accept-me" class="headerlink" title="Now I can simple make my own filter rules to find the college may be will accept me"></a>Now I can simple make my own filter rules to find the college may be will accept me</h3><p>,,,, a lot sense of sad, anyway.</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Code/">Code</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/24/折腾记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          shield折腾记－吐血篇
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/15/Logicbomb/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Made one simple Logic Bomb and 吐了点槽
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:vincecao.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">VINCEC的卖命地</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2016 VINCEC<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+	<center><h1><a href="http://saab26.lofter.com/"><font color="white"> - MY DARKSIDE - </font></a></h1></center>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

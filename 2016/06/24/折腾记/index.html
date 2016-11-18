@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>shield折腾记－吐血篇 | VINCEC的卖命地</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="手上这台shield也有些年头了，是刚出来第一批时候让哥哥从美国稍回来的。期间遇到了一次难得的电池问题召回，结果不但没拿回去还白送我了一台，就卖掉赚了点零花钱，但老的那台就注定不能在用原生的系统了，因为会通过原生固件强制报废电池。
+这是后话，而今天在打算捣鼓ubuntu之前已经刷到了RR的3.6.9 MM，相当稳定流畅。
+然后我就看到了这个帖子《Linux4Tegra R23.1/R24.1 be">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shield折腾记－吐血篇">
+<meta property="og:url" content="http://vincecao.github.io/2016/06/24/折腾记/index.html">
+<meta property="og:site_name" content="VINCEC的卖命地">
+<meta property="og:description" content="手上这台shield也有些年头了，是刚出来第一批时候让哥哥从美国稍回来的。期间遇到了一次难得的电池问题召回，结果不但没拿回去还白送我了一台，就卖掉赚了点零花钱，但老的那台就注定不能在用原生的系统了，因为会通过原生固件强制报废电池。
+这是后话，而今天在打算捣鼓ubuntu之前已经刷到了RR的3.6.9 MM，相当稳定流畅。
+然后我就看到了这个帖子《Linux4Tegra R23.1/R24.1 be">
+<meta property="og:image" content="http://i.imgur.com/9WWWYGt.jpg">
+<meta property="og:image" content="http://i.imgur.com/ZuQvsfZ.jpg">
+<meta property="og:image" content="http://i.imgur.com/OFjHqwG.jpg">
+<meta property="og:image" content="http://i.imgur.com/KQPwoiM.jpg">
+<meta property="og:image" content="http://i.imgur.com/9i8bcES.png">
+<meta property="og:updated_time" content="2016-07-29T02:13:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="shield折腾记－吐血篇">
+<meta name="twitter:description" content="手上这台shield也有些年头了，是刚出来第一批时候让哥哥从美国稍回来的。期间遇到了一次难得的电池问题召回，结果不但没拿回去还白送我了一台，就卖掉赚了点零花钱，但老的那台就注定不能在用原生的系统了，因为会通过原生固件强制报废电池。
+这是后话，而今天在打算捣鼓ubuntu之前已经刷到了RR的3.6.9 MM，相当稳定流畅。
+然后我就看到了这个帖子《Linux4Tegra R23.1/R24.1 be">
+<meta name="twitter:image" content="http://i.imgur.com/9WWWYGt.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="VINCEC的卖命地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  <style type="text/css">
+    .cuslogo{
+      transition: all .5s ease-out;
+      width: 25px;
+      height: auto;
+    }
+
+    .cuslogo:hover{
+      transform: scale(1.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">VINCEC的卖命地</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/kulucolo"><img class="cuslogo" src="http://i.imgur.com/wtppawI.png" alt= "kulucolo"></a></li>
+			<li><a href="https://github.com/vincecao/"><img class="cuslogo" src="http://i.imgur.com/5OEBGZB.png" alt= "github/vincecao"></a></li>
+			<li><a href="http://weibo.com/2267346425/"><img class="cuslogo" src="http://i.imgur.com/bm78nsD.png" alt= "weibo/SaaB26"></a></li>
+			<li><a href="https://www.linkedin.com/in/lineng-cao-36b693121"><img class="cuslogo" src="http://i.imgur.com/hmPUhBs.png" alt= "linkedin/lineng-cao"></a></li>
+			<li><a href="https://www.douban.com/people/saablancias/"><img class="cuslogo" src="http://i.imgur.com/1E4CIwC.png" alt= "douban/saablancias"></a></li>
+			<li><a href="https://www.flickr.com/photos/saablancias/"><img class="cuslogo" src="http://i.imgur.com/QtAzFxD.png" alt= "flickr/saablancias"></a></li>
+			<li><a href="https://www.instagram.com/vince_tso/"><img class="cuslogo" src="http://i.imgur.com/iFDXGJQ.png" alt= "instagram/vince_tso"></a></li>
+		</ul>
+		<ul>
+			<li><a href="/" rel="section">HOME</a></li>
+			<li><a href="/archives" rel="section">ARCHIVES</a></li>
+			<li><a href="/about" rel="section">ABOUT</a></li>
+			<li><a href="/video" rel="section">VIDEO</a></li>
+			<li><a href="/design" rel="section">DESIGN</a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://vincecao.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-折腾记" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/06/24/折腾记/" class="article-date">
+  <time datetime="2016-06-23T18:00:27.000Z" itemprop="datePublished">2016-06-24</time>
+</a>
+		</span>
+		<span class="meta-elements author">VINCEC</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      shield折腾记－吐血篇
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>手上这台shield也有些年头了，是刚出来第一批时候让哥哥从美国稍回来的。期间遇到了一次难得的电池问题召回，结果不但没拿回去还白送我了一台，就卖掉赚了点零花钱，但老的那台就注定不能在用原生的系统了，因为会通过原生固件强制报废电池。</p>
+<p>这是后话，而今天在打算捣鼓ubuntu之前已经刷到了<a href="http://forum.xda-developers.com/shield-tablet/development/rom-ressurrection-remix-m-t3327192" target="_blank" rel="external">RR的3.6.9 MM</a>，相当稳定流畅。</p>
+<p>然后我就看到了这个帖子<a href="http://forum.xda-developers.com/shield-tablet/development/running-ubuntu-natively-shield-tablet-t2985238" target="_blank" rel="external">《Linux4Tegra R23.1/R24.1 beta for the Shield Tablet》</a></p>
+<h2 id="一条不归路"><a href="#一条不归路" class="headerlink" title="一条不归路"></a>一条不归路</h2><p>首先先得解决MultiROM(MRom)的问题，根据xda教程<a href="http://forum.xda-developers.com/shield-tablet/development/multirom-v30-unofficial-port-t3025355" title="MultiROM v32 - unofficial port" target="_blank" rel="external">《MultiROM v32 - unofficial port》</a></p>
+<p>MRom 是装Ubuntu的关键，装成功成功之后似乎就可以直接用.mrom的类似镜像ghost般写入。<br>但是第一个问题出现了， MRom 在主页上最后更新是LP(Lollipop)的，并没有MM(Marshmallow)，进去能看见几秒的MROM的页面，但是竟然不能使用触摸。一番费大力寻找之后，<a href="http://forum.xda-developers.com/shield-tablet/development/multirom-v30-unofficial-port-t3025355/page34" title="不容易" target="_blank" rel="external">点这查看这个回复贴是藏的这么深</a>。</p>
+<p>终于在这个不起眼的尾页发现了大神新更新的两个MM下的<a href="https://www.androidfilehost.com/?fid=24499762636005537" title="Modified TRWP_MM版" target="_blank" rel="external">Modified TRWP_MM版</a> <code>twrp-multirom-20160422-EXPERIMENTAL-shieldtablet.img</code> 与<a href="https://www.androidfilehost.com/?fid=24499762635998042" title="MROM.zip" target="_blank" rel="external">MROM.zip</a> <code>multirom-20160410-v33-UNOFFICIAL-shieldtablet.zip</code> 刷机包文件，加上之前就得到的<a href="https://www.androidfilehost.com/?fid=23991606952608123" title="MultiROM Touch Support" target="_blank" rel="external">触摸文件</a>，看来是要大功告成了!</p>
+<p><em>一切都似乎非常顺利 MultiRom 到此为止成功在MM bootloader 下刷入，并顺利进入multiROm修改过后的twrp界面。</em></p>
+<p><img src="http://i.imgur.com/9WWWYGt.jpg" alt="" title="正在刷入Linux4Tegra"></p>
+<p><em>然而，Linux4Tegra 却还不支持MM的bootloader</em>，开心的刷入Linux4Tegra结果一直都在“黑英达节界面”一切又绕回了原点，到后来只能全部弄回LP。</p>
+<p><img src="http://i.imgur.com/ZuQvsfZ.jpg" alt="" title="眼看就要成功"></p>
+<p><img src="http://i.imgur.com/OFjHqwG.jpg" alt="" title="黑英达界面"></p>
+<h2 id="一切又回到起点"><a href="#一切又回到起点" class="headerlink" title="一切又回到起点"></a>一切又回到起点</h2><p>按照官方文档， 并且手头上存有2.2的官方ota包，从中提取出了 <code>boot.img, blob</code> 还有 <code>tegra&lt;version&gt;.dtb</code> 。<br><em>因为实在已经刷了太多遍了</em></p>
+<blockquote>
+<p>可参照<a href="http://docs.nvidia.com/gameworks/content/devices/shield_flashing_from_image.htm" target="_blank" rel="external">官方文档</a></p>
+</blockquote>
+<p>在windows上adb中按次序依次刷入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">fastboot flash recovery twrp-multirom-20150909-UNOFFICIAL-shieldtablet.img</div><div class="line">fastboot flash boot boot.img</div><div class="line">fastboot flash staging blob</div><div class="line">fastboot flash dtb tegra124-tn8-p1761-1270-a04-e-battery.dtb</div><div class="line"></div><div class="line">fastboot reboot</div></pre></td></tr></table></figure>
+<p>并重启，并进入recovery刷入</p>
+<blockquote>
+<p>MultiROM(上文中有新的v33): <a href="https://www.androidfilehost.com/?fid=24052804347811950" target="_blank" rel="external">multirom-20150909-v32a-UNOFFICIAL-shieldtablet.zip</a></p>
+<p>MultiROM Touch Support (only needed if not upgrading): <a href="https://www.androidfilehost.com/?fid=23991606952608123" target="_blank" rel="external">multirom_shieldtablet_touch_support.zip</a></p>
+<p>Modified recovery_LP版的 (based on TWRP 2.8.7.0): <a href="https://www.androidfilehost.com/?fid=24052804347811951" target="_blank" rel="external">twrp-multirom-20150909-UNOFFICIAL-shieldtablet.img</a></p>
+<p><ins>按照xda教程<a href="http://forum.xda-developers.com/shield-tablet/development/running-ubuntu-natively-shield-tablet-t2985238" target="_blank" rel="external">《Linux4Tegra R23.1/R24.1 beta for the Shield Tablet》</a>的描述，应该只用把一个镜像包文件（快照），一个 <code>New_boot.img</code> 按照指令 <code>fastboot boot new_boot.img -c &quot;console=tty1 fbcon=map:10 fbcon=rotate:2 fbfix&quot;</code></ins> 。</p>
+</blockquote>
+<p><em>重启，再次进入modified recovery, 刷入《Linux4Tegra R23.1/R24.1 beta for the Shield Tablet》中提供的.mrom系统文件</em><code>Linux4TegraR241beta.mrom</code>_.</p>
+<p><img src="http://i.imgur.com/KQPwoiM.jpg" alt="" title="又回到LP了，好久不见的画面"></p>
+<p><em>这里不知道什么原因，外置的otg加U盘无法使用在recovery里，于是又得绕回去，因为系统已经是MM了，但bootloader回到了LP的，还好已经装了MultiRom, 尝试了重装原版 <code>twrp-2.8.7.1-shieldtablet.img</code> 再装了第二个第三方LP的ROM在internal下</em></p>
+<p>目前折腾了一个晚上还卡在这一步，实在一下子研究不透了，现在依然在尝试,还是卡在ubuntu进入页面</p>
+<p>啊，好想玩上Ubuntu，像这个<a href="http://wincak.besaba.com/category/shield-tablet/" target="_blank" rel="external">小哥</a>一样。。。</p>
+<h2 id="6-28-2016-更新"><a href="#6-28-2016-更新" class="headerlink" title="6/28/2016 更新"></a>6/28/2016 更新</h2><p>大功告成，通过新刷入一个cm12.1的rom（这似乎非常有用，不然一直卡在英伟达界面上），重新在LP的bootloader下刷入所有之前都有涉及过的文件（MultiROM，MultiROM Touch Support，Modified recovery_LP版的 (based on TWRP 2.8.7.0)）并采用Linux4TegraR241beta固件。</p>
+<p><img src="http://i.imgur.com/9i8bcES.png" alt=""></p>
+<p>以下是一个小的演示视频：</p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/H14cy29nWWM" frameborder="0" allowfullscreen></iframe></div>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/15/TabPage/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          A html page with Tab features
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/18/Ranking/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          College Select
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:vincecao.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">VINCEC的卖命地</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2016 VINCEC<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+	<center><h1><a href="http://saab26.lofter.com/"><font color="white"> - MY DARKSIDE - </font></a></h1></center>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
